@@ -1,0 +1,30 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "newStorageAccountName": {
+      "value": "#####"
+    },
+    "vmName": {
+      "value": "ps-migrate-server"
+    },
+    "vmSize": {
+      "value": "Standard_A2"
+    },
+    "imageSKU": {
+      "value": "2012-R2-Datacenter"
+    },
+    "adminUsername": {
+      "value": "ChangeAdminName"
+    },
+    "adminPassword": {
+      "value": "ChangePassword1"
+    },
+    "modulesUrl": {
+      "value": "https://github.com/JoeAstin/ps-migrate-azure/raw/master/MigrateReady.zip"
+    },
+    "configurationFunction": {
+      "value": "MigrateReady.ps1\\MigrateReady"
+    }
+  }
+}
