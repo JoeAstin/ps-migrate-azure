@@ -3,6 +3,7 @@ Configuration MigrateReady
   param ($MachineName)
 
   Import-DscResource -ModuleName PSDesiredStateConfiguration
+  Import-DscResource -ModuleName cChoco
 
   Node $MachineName
   {
@@ -195,7 +196,16 @@ Configuration MigrateReady
       IncludeAllSubFeature = $True
     }
 
-
+	cChocoInstaller installChoco
+	{
+	  InstallDir = "c:\choco"
+	}
+	
+	cChocoPackageInstaller installSqlServer
+	{
+	  Name = "mssqlserver2014express"
+	  DependsOn = "[cChocoInstaller]installChoco"
+	}
 
 
 
