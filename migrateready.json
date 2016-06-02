@@ -54,7 +54,7 @@
       "type": "string",
       "metadata": {
         "description": "URL for the DSC configuration module. NOTE: Can be a Github url(raw) to the zip file"
-      }
+      },
 	  "defaultValue" : "https://github.com/JoeAstin/ps-migrate-azure/raw/master/MigrateReady.zip"
     },
     "configurationFunction": {
