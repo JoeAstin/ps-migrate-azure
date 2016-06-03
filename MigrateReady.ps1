@@ -1,198 +1,198 @@
-Configuration MigrateReady
+ï»¿Configuration MigrateReady
 {
   param ($MachineName)
 
   Import-DscResource -ModuleName PSDesiredStateConfiguration
-  Import-DscResource -ModuleName cChoco
+  Import-DscResource -ModuleName cChoco -ModuleVersion 2.0.5.22
 
   Node $MachineName
   {
     #Install the IIS Role
     WindowsFeature IIS
     {
-      Ensure = “Present”
-      Name = “Web-Server”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Serverâ€
     }
 
     WindowsFeature WebServer
     {
-      Ensure = “Present”
-      Name = “Web-WebServer”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-WebServerâ€
     }
 
     WindowsFeature HttpFeatures
     {
-      Ensure = “Present”
-      Name = “Web-Common-Http”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Common-Httpâ€
     }
 
     WindowsFeature HttpFeatures1
     {
-      Ensure = “Present”
-      Name = “Web-Default-Doc”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Default-Docâ€
     }
     WindowsFeature HttpFeatures2
     {
-      Ensure = “Present”
-      Name = “Web-Dir-Browsing”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Dir-Browsingâ€
     }
     WindowsFeature HttpFeatures3
     {
-      Ensure = “Present”
-      Name = “Web-Http-Errors”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Http-Errorsâ€
     }
     WindowsFeature HttpFeatures4
     {
-      Ensure = “Present”
-      Name = “Web-Static-Content”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Static-Contentâ€
     }
 
     WindowsFeature HealthAndDiagnostics
     {
-      Ensure = “Present”
-      Name = “Web-Health”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Healthâ€
     }
     WindowsFeature HealthAndDiagnostics1
     {
-      Ensure = “Present”
-      Name = “Web-Http-Logging”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Http-Loggingâ€
     }
     WindowsFeature HealthAndDiagnostics2
     {
-      Ensure = “Present”
-      Name = “Web-Request-Monitor”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Request-Monitorâ€
     }
 
     WindowsFeature Performance
     {
-      Ensure = “Present”
-      Name = “Web-Performance”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Performanceâ€
     }
     WindowsFeature Performance1
     {
-      Ensure = “Present”
-      Name = “Web-Stat-Compression”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Stat-Compressionâ€
     }
 
     WindowsFeature Security
     {
-      Ensure = “Present”
-      Name = “Web-Security”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Securityâ€
     }
     WindowsFeature Security1
     {
-      Ensure = “Present”
-      Name = “Web-Filtering”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Filteringâ€
     }
     WindowsFeature Security2
     {
-      Ensure = “Present”
-      Name = “Web-Basic-Auth”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Basic-Authâ€
     }
     WindowsFeature Security3
     {
-      Ensure = “Present”
-      Name = “Web-IP-Security”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-IP-Securityâ€
     }
     WindowsFeature Security4
     {
-      Ensure = “Present”
-      Name = “Web-Url-Auth”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Url-Authâ€
     }
     WindowsFeature Security5
     {
-      Ensure = “Present”
-      Name = “Web-Windows-Auth”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Windows-Authâ€
     }
     
     WindowsFeature ApplicationDevelopment
     {
-      Ensure = “Present”
-      Name = “Web-App-Dev”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-App-Devâ€
     }
     WindowsFeature ApplicationDevelopment1
     {
-      Ensure = “Present”
-      Name = “Web-Net-Ext”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Net-Extâ€
     }
     WindowsFeature ApplicationDevelopment2
     {
-      Ensure = “Present”
-      Name = “Web-Net-Ext45”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Net-Ext45â€
     }
     WindowsFeature ApplicationDevelopment3
     {
-      Ensure = “Present”
-      Name = “Web-AppInit”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-AppInitâ€
     }
     WindowsFeature ApplicationDevelopment4
     {
-      Ensure = “Present”
-      Name = “Web-Asp-Net”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Asp-Netâ€
     }
     WindowsFeature ApplicationDevelopment5
     {
-      Ensure = “Present”
-      Name = “Web-Asp-Net45”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Asp-Net45â€
     }
     WindowsFeature ApplicationDevelopment6
     {
-      Ensure = “Present”
-      Name = “Web-ISAPI-Ext”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-ISAPI-Extâ€
     }
     WindowsFeature ApplicationDevelopment7
     {
-      Ensure = “Present”
-      Name = “Web-ISAPI-Filter”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-ISAPI-Filterâ€
     }
 
     WindowsFeature ManagementTools
     {
-      Ensure = “Present”
-      Name = “Web-Mgmt-Tools”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Mgmt-Toolsâ€
     }
     WindowsFeature ManagementTools1
     {
-      Ensure = “Present”
-      Name = “Web-Mgmt-Console”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Mgmt-Consoleâ€
     }
     WindowsFeature ManagementTools2
     {
-      Ensure = “Present”
-      Name = “Web-Mgmt-Compat”
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Mgmt-Compatâ€
       IncludeAllSubFeature = $True
     }
     WindowsFeature ManagementTools3
     {
-      Ensure = “Present”
-      Name = “Web-Scripting-Tools”     
+      Ensure = â€œPresentâ€
+      Name = â€œWeb-Scripting-Toolsâ€     
     }
 
     WindowsFeature NET3.5
     {
-      Ensure = “Present”
-      Name = “NET-Framework-Features”
+      Ensure = â€œPresentâ€
+      Name = â€œNET-Framework-Featuresâ€
       IncludeAllSubFeature = $True
     }
  
     WindowsFeature NET4.5
     {
-      Ensure = “Present”
-      Name = “NET-Framework-45-Features”
+      Ensure = â€œPresentâ€
+      Name = â€œNET-Framework-45-Featuresâ€
       IncludeAllSubFeature = $True
     }
 
     WindowsFeature WindowsProcessActivation
     {
-      Ensure = “Present”
-      Name = “WAS”
+      Ensure = â€œPresentâ€
+      Name = â€œWASâ€
       IncludeAllSubFeature = $True
     }
 
     WindowsFeature XPSViewer
     {
-      Ensure = “Present”
-      Name = “XPS-Viewer”
+      Ensure = â€œPresentâ€
+      Name = â€œXPS-Viewerâ€
       IncludeAllSubFeature = $True
     }
 
